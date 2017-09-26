@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海清算所_信息披露</title><link rel="stylesheet" href="../../images/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="../../images/nr_xxpl_index.css" type="text/css">
+<link rel="stylesheet" href="../../images/head_footer.css" type="text/css">
+<link rel="shortcut icon" href="/images/logo_small.ico" type="image/x-icon" />
+<script type="text/javascript">
+	var xxpl_id = "发行披露";
+	var zNodes =[
+	{ id:9, pId:0, name:"受权发布",xxpl_url:"../sqfb/",xxpl_id:"受权发布",xxpl_desc:"受权发布"},
+	{ id:1, pId:0, name:"发行披露",xxpl_url:"./",xxpl_id:"发行披露",xxpl_desc:"发行披露"},
+	{ id:11, pId:1, name:"人民币债券",xxpl_url:"./rmb1/",xxpl_id:"rmb1",xxpl_desc:"人民币债券"},
+    	{ id:12, pId:1, name:"特别提款权计价债券",xxpl_url:"./sdr1/",xxpl_id:"sdr1",xxpl_desc:"特别提款权计价债券"},
+    	{ id:13, pId:1, name:"同业存单",xxpl_url:"./tycd1/",xxpl_id:"同业存单_01",xxpl_desc:"同业存单"},
+	{ id:14, pId:1, name:"资产支持证券",xxpl_url:"./abs/",xxpl_id:"ABS",xxpl_desc:"资产支持证券"},
+	{ id:15, pId:1, name:"信用风险缓释凭证",xxpl_url:"./crmw/",xxpl_id:"CRMW",xxpl_desc:"信用风险缓释凭证"},
+	{ id:16, pId:1, name:"信用联结票据",xxpl_url:"./cln1/",xxpl_id:"CLN_1",xxpl_desc:"信用联结票据"},
+	{ id:17, pId:1, name:"非公开定向债务融资工具",xxpl_url:"./ppn/",xxpl_id:"PPN",xxpl_desc:"非公开定向债务融资工具"},
+	{ id:18, pId:1, name:"中期票据",xxpl_url:"./mtn/",xxpl_id:"MTN",xxpl_desc:"中期票据"},
+	{ id:19, pId:1, name:"短期融资券",xxpl_url:"./cp/",xxpl_id:"CP",xxpl_desc:"短期融资券"},
+	{ id:110, pId:1, name:"超短期融资券",xxpl_url:"./scp/",xxpl_id:"SCP",xxpl_desc:"超短期融资券"},
+	{ id:111, pId:1, name:"区域集优中小企业集合...",xxpl_url:"./smecnii/",xxpl_id:"SMECNII",xxpl_desc:"区域集优中小企业集合票据"},
+    	{ id:112, pId:1, name:"绿色债务融资工具",xxpl_url:"./GN_1/",xxpl_id:"GN_1",xxpl_desc:"绿色债务融资工具"},
+	{ id:113, pId:1, name:"非金融企业资产支持票据",xxpl_url:"./abn/",xxpl_id:"ABN",xxpl_desc:"非金融企业资产支持票据"},
+    	{ id:114, pId:1, name:"项目收益票据",xxpl_url:"./PRN_1/",xxpl_id:"PRN_1",xxpl_desc:"项目收益票据"},
+	{ id:115, pId:1, name:"金融企业短期融资券",xxpl_url:"./qscp/",xxpl_id:"券商CP",xxpl_desc:"金融企业短期融资券"},
+	{ id:116, pId:1, name:"金融债",xxpl_url:"./jrz/",xxpl_id:"金融债",xxpl_desc:"金融债"},
+
+	{ id:2, pId:0, name:"发行情况报告",xxpl_url:"../fxqkbg/",xxpl_id:"发行情况报告",xxpl_desc:"发行情况报告"},
+   	{ id:21, pId:2, name:"人民币债券",xxpl_url:"../fxqkbg/rmb2/",xxpl_id:"rmb2",xxpl_desc:"人民币债券"},
+    	{ id:22, pId:2, name:"特别提款权计价债券",xxpl_url:"../fxqkbg/sdr2/",xxpl_id:"sdr2",xxpl_desc:"特别提款权计价债券"},
+    	{ id:23, pId:2, name:"同业存单",xxpl_url:"../fxqkbg/tycd2/",xxpl_id:"同业存单_02",xxpl_desc:"同业存单"},
+	{ id:24, pId:2, name:"资产支持证券",xxpl_url:"../fxqkbg/abs01/",xxpl_id:"ABS_01",xxpl_desc:"资产支持证券"},
+	{ id:25, pId:2, name:"信用风险缓释凭证",xxpl_url:"../fxqkbg/crmw01/",xxpl_id:"CRMW_01",xxpl_desc:"信用风险缓释凭证"},
+	{ id:26, pId:2, name:"信用联结票据",xxpl_url:"../fxqkbg/cln2/",xxpl_id:"CLN_2",xxpl_desc:"信用联结票据"},
+	{ id:27, pId:2, name:"非公开定向债务融资工具",xxpl_url:"../fxqkbg/ppn01/",xxpl_id:"PPN_01",xxpl_desc:"非公开定向债务融资工具"},
+	{ id:28, pId:2, name:"中期票据",xxpl_url:"../fxqkbg/mtn01/",xxpl_id:"MTN_01",xxpl_desc:"中期票据"},
+	{ id:29, pId:2, name:"短期融资券",xxpl_url:"../fxqkbg/cp01/",xxpl_id:"CP_01",xxpl_desc:"短期融资券"},
+	{ id:210, pId:2, name:"超短期融资券",xxpl_url:"../fxqkbg/scp01/",xxpl_id:"SCP_01",xxpl_desc:"超短期融资券"},
+	{ id:211, pId:2, name:"区域集优中小企业集合...",xxpl_url:"../fxqkbg/smecnii01/",xxpl_id:"SMECNII_01",xxpl_desc:"区域集优中小企业集合票据"},
+    	{ id:212, pId:2, name:"绿色债务融资工具",xxpl_url:"../fxqkbg/GN_2/",xxpl_id:"GN_2",xxpl_desc:"绿色债务融资工具"},
+	{ id:213, pId:2, name:"非金融企业资产支持票据",xxpl_url:"../fxqkbg/abn01/",xxpl_id:"ABN_01",xxpl_desc:"非金融企业资产支持票据"},
+   	 { id:214, pId:2, name:"项目收益票据",xxpl_url:"../fxqkbg/PRN_2/",xxpl_id:"PRN_2",xxpl_desc:"项目收益票据"},
+	{ id:215, pId:2, name:"金融企业短期融资券",xxpl_url:"../fxqkbg/qscp01/",xxpl_id:"券商CP_01",xxpl_desc:"金融企业短期融资券"},
+	{ id:216, pId:2, name:"金融债",xxpl_url:"../fxqkbg/jrz01/",xxpl_id:"金融债_01",xxpl_desc:"金融债"},
+
+
+	{ id:3, pId:0, name:"交易流通要素公告",xxpl_url:"../jyltysgg/",xxpl_id:"交易流通要素公告",xxpl_desc:"交易流通要素公告"},
+    	{ id:31, pId:3, name:"人民币债券",xxpl_url:"../jyltysgg/rmb3/",xxpl_id:"rmb3",xxpl_desc:"人民币债券"},
+    	{ id:32, pId:3, name:"特别提款权计价债券",xxpl_url:"../jyltysgg/sdr3/",xxpl_id:"sdr3",xxpl_desc:"特别提款权计价债券"},
+    	{ id:33, pId:3, name:"同业存单",xxpl_url:"../jyltysgg/ncd/",xxpl_id:"同业存单_05",xxpl_desc:"同业存单"},
+	{ id:34, pId:3, name:"资产支持证券",xxpl_url:"../jyltysgg/abs_548/",xxpl_id:"ABS_548",xxpl_desc:"资产支持证券"},
+	{ id:35, pId:3, name:"信用风险缓释凭证",xxpl_url:"../jyltysgg/crmw_551/",xxpl_id:"CRMW_551",xxpl_desc:"信用风险缓释凭证"},
+	{ id:36, pId:3, name:"信用联结票据",xxpl_url:"../jyltysgg/cln3/",xxpl_id:"CLN_3",xxpl_desc:"信用联结票据"},
+	{ id:37, pId:3, name:"非公开定向债务融资工具",xxpl_url:"../jyltysgg/ppn_546/",xxpl_id:"PPN_546",xxpl_desc:"非公开定向债务融资工具"},
+	{ id:38, pId:3, name:"中期票据",xxpl_url:"../jyltysgg/mtn_542/",xxpl_id:"MTN_542",xxpl_desc:"中期票据"},
+	{ id:39, pId:3, name:"短期融资券",xxpl_url:"../jyltysgg/cp_543/",xxpl_id:"CP_543",xxpl_desc:"短期融资券"},
+	{ id:310, pId:3, name:"超短期融资券",xxpl_url:"../jyltysgg/scp_544/",xxpl_id:"SCP_544",xxpl_desc:"超短期融资券"},
+	{ id:311, pId:3, name:"区域集优中小企业集合...",xxpl_url:"../jyltysgg/smecnii_550/",xxpl_id:"SMECNII_550",xxpl_desc:"区域集优中小企业集合票据"},
+	{ id:312, pId:3, name:"绿色债务融资工具",xxpl_url:"../jyltysgg/GN_3/",xxpl_id:"GN_3",xxpl_desc:"绿色债务融资工具"},
+	{ id:313, pId:3, name:"非金融企业资产支持票据",xxpl_url:"../jyltysgg/abn_549/",xxpl_id:"ABN_549",xxpl_desc:"非金融企业资产支持票据"},
+    	{ id:314, pId:3, name:"项目收益票据",xxpl_url:"../jyltysgg/PRN_3/",xxpl_id:"PRN_3",xxpl_desc:"项目收益票据"},
+	{ id:315, pId:3, name:"金融企业短期融资券",xxpl_url:"../jyltysgg/qscp_545/",xxpl_id:"券商CP_545",xxpl_desc:"金融企业短期融资券"},
+	{ id:316, pId:3, name:"金融债",xxpl_url:"../jyltysgg/jrz_547/",xxpl_id:"金融债_547",xxpl_desc:"金融债"},
+
+
+	{ id:4, pId:0, name:"信用评级",xxpl_url:"../xypj/",xxpl_id:"信用评级",xxpl_desc:"信用评级"},
+	{ id:41, pId:4, name:"披露主体",xxpl_url:"../xypj/plzt/",xxpl_id:"披露主体",xxpl_desc:"披露主体"},
+	{ id:42, pId:4, name:"债项披露",xxpl_url:"../xypj/zxpl/",xxpl_id:"债项披露",xxpl_desc:"债项披露"},
+    	{ id:421, pId:42, name:"人民币债券",xxpl_url:"../xypj/zxpl/rmb4/",xxpl_id:"rmb4",xxpl_desc:"人民币债券"},
+    	{ id:422, pId:42, name:"特别提款权计价债券",xxpl_url:"../dfzx/sdr5/",xxpl_id:"sdr5",xxpl_desc:"特别提款权计价债券"},
+	{ id:423, pId:42, name:"同业存单",xxpl_url:"../xypj/zxpl/tycd3/",xxpl_id:"同业存单_03",xxpl_desc:"同业存单"},
+	{ id:424, pId:42, name:"资产支持证券",xxpl_url:"../xypj/zxpl/abs_560/",xxpl_id:"ABS_560",xxpl_desc:"资产支持证券"},
+	{ id:425, pId:42, name:"信用风险缓释凭证",xxpl_url:"../xypj/zxpl/crmw_563/",xxpl_id:"CRMW_563",xxpl_desc:"信用风险缓释凭证"},
+	{ id:426, pId:42, name:"信用联结票据",xxpl_url:"../xypj/zxpl/cln4/",xxpl_id:"CLN_4",xxpl_desc:"信用联结票据"},
+	{ id:427, pId:42, name:"非公开定向债务融...",xxpl_url:"../xypj/zxpl/ppn_558/",xxpl_id:"PPN_558",xxpl_desc:"非公开定向债务融资工具"},
+	{ id:428, pId:42, name:"中期票据",xxpl_url:"../xypj/zxpl/mtn_554/",xxpl_id:"MTN_554",xxpl_desc:"中期票据"},
+	{ id:429, pId:42, name:"短期融资券",xxpl_url:"../xypj/zxpl/cp_555/",xxpl_id:"CP_555",xxpl_desc:"短期融资券"},
+	{ id:430, pId:42, name:"超短期融资券",xxpl_url:"../xypj/zxpl/scp_556/",xxpl_id:"SCP_556",xxpl_desc:"超短期融资券"},
+	{ id:431, pId:42, name:"区域集优中小企业...",xxpl_url:"../xypj/zxpl/smecnii_562/",xxpl_id:"SMECNII_562",xxpl_desc:"区域集优中小企业集合票据"},
+    	{ id:432, pId:42, name:"绿色债务融资工具",xxpl_url:"../xypj/zxpl/GN_4/",xxpl_id:"GN_4",xxpl_desc:"绿色债务融资工具"},
+	{ id:433, pId:42, name:"非金融企业资产支...",xxpl_url:"../xypj/zxpl/abn_561/",xxpl_id:"ABN_561",xxpl_desc:"非金融企业资产支持票据"},
+    	{ id:434, pId:42, name:"项目收益票据",xxpl_url:"../xypj/zxpl/PRN_4/",xxpl_id:"PRN_4",xxpl_desc:"项目收益票据"},
+	{ id:435, pId:42, name:"金融企业短期融资券",xxpl_url:"../xypj/zxpl/qscp_557/",xxpl_id:"券商CP_557",xxpl_desc:"金融企业短期融资券"},
+	{ id:436, pId:42, name:"金融债",xxpl_url:"../xypj/zxpl/jrz_559/",xxpl_id:"金融债_559",xxpl_desc:"金融债"},
+
+
+	{ id:5, pId:0, name:"财务报告",xxpl_url:"../cwbg/",xxpl_id:"财务报告",xxpl_desc:"财务报告"},
+	{ id:51, pId:5, name:"一季报",xxpl_url:"../cwbg/yjb/",xxpl_id:"一季报",xxpl_desc:"一季报"},
+	{ id:52, pId:5, name:"半年报",xxpl_url:"../cwbg/bnb/",xxpl_id:"半年报",xxpl_desc:"半年报"},
+	{ id:53, pId:5, name:"三季报",xxpl_url:"../cwbg/sjb/",xxpl_id:"三季报",xxpl_desc:"三季报"},
+	{ id:54, pId:5, name:"年报",xxpl_url:"../cwbg/nb/",xxpl_id:"年报",xxpl_desc:"年报"},
+	{ id:6, pId:0, name:"重大事项及其他",xxpl_url:"../zdsxjqt/",xxpl_id:"重大事项及其他",xxpl_desc:"重大事项及其他"},
+	{ id:7, pId:0, name:"兑付注销",xxpl_url:"../dfzx/",xxpl_id:"兑付注销",xxpl_desc:"兑付注销"},
+        { id:71, pId:7, name:"月度提示",xxpl_url:"../dfzx/ydts/",xxpl_id:"月度提示",xxpl_desc:"月度提示"},
+        { id:72, pId:7, name:"人民币债券",xxpl_url:"../dfzx/rmb5/",xxpl_id:"rmb5",xxpl_desc:"人民币债券"},
+        { id:73, pId:7, name:"特别提款权计价债券",xxpl_url:"../xypj/zxpl/sdr4/",xxpl_id:"sdr4",xxpl_desc:"特别提款权计价债券"},
+        { id:74, pId:7, name:"同业存单",xxpl_url:"../dfzx/tycd/",xxpl_id:"同业存单_04",xxpl_desc:"同业存单"},
+	{ id:75, pId:7, name:"资产支持证券",xxpl_url:"../dfzx/abs_577/",xxpl_id:"ABS_577",xxpl_desc:"资产支持证券"},
+	{ id:76, pId:7, name:"信用风险缓释凭证",xxpl_url:"../dfzx/crmw_580/",xxpl_id:"CRMW_580",xxpl_desc:"信用风险缓释凭证"},
+	{ id:77, pId:7, name:"信用联结票据",xxpl_url:"../dfzx/cln5/",xxpl_id:"CLN_5",xxpl_desc:"信用联结票据"},
+	{ id:78, pId:7, name:"非公开定向债务融资工...",xxpl_url:"../dfzx/ppn_575/",xxpl_id:"PPN_575",xxpl_desc:"非公开定向债务融资工具"},
+	{ id:79, pId:7, name:"中期票据",xxpl_url:"../dfzx/mtn_571/",xxpl_id:"MTN_571",xxpl_desc:"中期票据"},
+	{ id:710, pId:7, name:"短期融资券",xxpl_url:"../dfzx/cp_572/",xxpl_id:"CP_572",xxpl_desc:"短期融资券"},
+	{ id:711, pId:7, name:"超短期融资券",xxpl_url:"../dfzx/scp_573/",xxpl_id:"SCP_573",xxpl_desc:"超短期融资券"},
+	{ id:712, pId:7, name:"区域集优中小企业集合...",xxpl_url:"../dfzx/smecnii_579/",xxpl_id:"SMECNII_579",xxpl_desc:"区域集优中小企业集合票据"},
+        { id:713, pId:7, name:"绿色债务融资工具",xxpl_url:"../dfzx/GN_5/",xxpl_id:"GN_5",xxpl_desc:"绿色债务融资工具"},
+	{ id:714, pId:7, name:"非金融企业资产支持票据",xxpl_url:"../dfzx/abn_578/",xxpl_id:"ABN_578",xxpl_desc:"非金融企业资产支持票据"},
+        { id:715, pId:7, name:"项目收益票据",xxpl_url:"../dfzx/PRN_5/",xxpl_id:"PRN_5",xxpl_desc:"项目收益票据"},
+	{ id:716, pId:7, name:"金融企业短期融资券",xxpl_url:"../dfzx/qscp_574/",xxpl_id:"券商CP_574",xxpl_desc:"金融企业短期融资券"},
+	{ id:717, pId:7, name:"金融债",xxpl_url:"../dfzx/jrz_576/",xxpl_id:"金融债_576",xxpl_desc:"金融债"},
+
+
+  { id:8, pId:0, name:"历史数据",xxpl_url:"../lssj/",xxpl_id:"历史数据",xxpl_desc:"历史数据"},
+  { id:81, pId:8, name:"发行创设公告",xxpl_url:"../lssj/fxpl/",xxpl_id:"发行创设公告",xxpl_desc:"发行创设公告"},
+  { id:811, pId:81, name:"信用风险缓释凭证",xxpl_url:"../lssj/fxpl/crmw/",xxpl_id:"CRMW_343",xxpl_desc:"信用风险缓释凭证"},
+  { id:812, pId:81, name:"超短期融资券",xxpl_url:"../lssj/fxpl/scp/",xxpl_id:"SCP_336",xxpl_desc:"超短期融资券"},
+  { id:813, pId:81, name:"非公开定向债务融...",xxpl_url:"../lssj/fxpl/ppn/",xxpl_id:"PPN_338",xxpl_desc:"非公开定向债务融资工具"},
+  { id:814, pId:81, name:"短期融资券",xxpl_url:"../lssj/fxpl/cp/",xxpl_id:"CP_335",xxpl_desc:"短期融资券"},
+  { id:815, pId:81, name:"金融企业短期融资券",xxpl_url:"../lssj/fxpl/qscp/",xxpl_id:"券商CP_337",xxpl_desc:"金融企业短期融资券"},
+  { id:816, pId:81, name:"区域集优中小企业...",xxpl_url:"../lssj/fxpl/smecnii/",xxpl_id:"SMECNII_342",xxpl_desc:"区域集优中小企业集合票据"},
+  { id:817, pId:81, name:"非金融企业资产支...",xxpl_url:"../lssj/fxpl/abn/",xxpl_id:"ABN_341",xxpl_desc:"非金融企业资产支持票据"},
+  { id:818, pId:81, name:"资产支持证券",xxpl_url:"../lssj/fxpl/abs/",xxpl_id:"ABS_340",xxpl_desc:"资产支持证券"},
+  { id:819, pId:81, name:"金融债",xxpl_url:"../lssj/fxpl/jrz/",xxpl_id:"金融债_339",xxpl_desc:"金融债"},
+  { id:82, pId:8, name:"信用评级跟踪披露",xxpl_url:"../lssj/xypjgzpl/",xxpl_id:"信用评级跟踪披露",xxpl_desc:"信用评级跟踪披露"},
+  { id:83, pId:8, name:"财务报告和重大事项公告",xxpl_url:"../lssj/cwbg/",xxpl_id:"财务报告和重大事项公告",xxpl_desc:"财务报告和重大事项公告"},
+  { id:831, pId:83, name:"2011年第三季度",xxpl_url:"../lssj/cwbg/201103/",xxpl_id:"2011年第三季度",xxpl_desc:"2011年第三季度"},
+  { id:832, pId:83, name:"2011年第二季度",xxpl_url:"../lssj/cwbg/201102/",xxpl_id:"2011年第二季度",xxpl_desc:"2011年第二季度"},
+  { id:833, pId:83, name:"2011年第一季度",xxpl_url:"../lssj/cwbg/201101/",xxpl_id:"2011年第一季度",xxpl_desc:"2011年第一季度"},
+  { id:834, pId:83, name:"2012年度财务报表",xxpl_url:"../lssj/cwbg/2012/",xxpl_id:"2012年度财务报表",xxpl_desc:"2012年度财务报表"},
+  { id:835, pId:83, name:"2013年年报披露",xxpl_url:"../lssj/cwbg/2013/",xxpl_id:"2013年年报披露",xxpl_desc:"2013年年报披露"},
+  { id:836, pId:83, name:"重大事项公告",xxpl_url:"../lssj/cwbg/zdsxgg/",xxpl_id:"重大事项公告",xxpl_desc:"重大事项公告"},
+  { id:837, pId:83, name:"信息披露管理办法",xxpl_url:"../lssj/cwbg/xxplglff/",xxpl_id:"信息披露管理办法",xxpl_desc:"信息披露管理办法"},
+  { id:84, pId:8, name:"付息兑付及注销",xxpl_url:"../lssj/fxdfjzx/",xxpl_id:"付息兑付及注销",xxpl_desc:"付息兑付及注销"},
+  { id:841, pId:84, name:"月度提示",xxpl_url:"../lssj/fxdfjzx/ydts/",xxpl_id:"月度提示_363",xxpl_desc:"月度提示"},
+  { id:842, pId:84, name:"信用风险缓释凭证",xxpl_url:"../lssj/fxdfjzx/crmw_580/",xxpl_id:"CRMW_362",xxpl_desc:"信用风险缓释凭证"},
+  { id:843, pId:84, name:"超短期融资券",xxpl_url:"../lssj/fxdfjzx/scp_573/",xxpl_id:"SCP_355",xxpl_desc:"超短期融资券"},
+  { id:844, pId:84, name:"短期融资券",xxpl_url:"../lssj/fxdfjzx/cp_572/",xxpl_id:"CP_354",xxpl_desc:"短期融资券"},
+  { id:845, pId:84, name:"非公开定向债务融...",xxpl_url:"../lssj/fxdfjzx/ppn_575/",xxpl_id:"PPN_357",xxpl_desc:"非公开定向债务融资工具"},
+  { id:846, pId:84, name:"区域集优中小企业...",xxpl_url:"../lssj/fxdfjzx/smecnii_579/",xxpl_id:"SMECNII_361",xxpl_desc:"区域集优中小企业集合票据"},
+  { id:847, pId:84, name:"金融企业短期融资券",xxpl_url:"../lssj/fxdfjzx/qscp/",xxpl_id:"券商CP_301",xxpl_desc:"金融企业短期融资券"},
+
+	];
+</script>
+<script type="text/javascript" src="../../images/contract.js"></script>
+<script type="text/javascript" src="../../images/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../../images/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="../../images/paging_xxpl.js"></script>
+<script type="text/javascript" src="../../images/MD5.js"></script>
+<script type="text/javascript" src="../../images/calendar.js"></script>
+<script type="text/javascript" src="../../images/nr_xxpl_index.js"></script>
+<script type="text/javascript" src="../../images/divs.js"></script>
+</head>
+
+<body>
+    <div class="header_wrap">
+  <div class="topNav_wrap">
+    <div class="top_nav">
+      <div class="l_info">
+        <p>欢迎来到银行间市场清算所股份有限公司&nbsp;&nbsp;技术运维：<span>021-23198760</span>&nbsp;&nbsp;托管账户查询及证书相关：<span>021-23198686</span></p>
+      </div>
+      <div class="r_link"><span></span></div>
+    </div>
+  </div>
+  <div class="head_wrap">
+    <div class="head">
+      <div class="logo"><img src="../../images/SCH_logo.jpg" width="330" height="86" title="点击返回首页" /></div>
+      <div class="searchDiv">
+        <div class="search_triggers"><span><a class="xxpl top_on">信息披露</a>|<a class="zqjs">债券检索</a>|<a class="qwjs">全文检索</a></span></div>
+        <div class="search_panel">
+        	<form method="post" id="form01" target="_blank">
+	          <input type="text" class="search_input" name="strWhere" value="发行人/披露主体" />
+	          <input type="button" class="submit" />
+          </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+  </div>
+    <div class="clear"></div>
+  </div>
+  <div class="nav_wrap">
+  	<div class="nav">
+      <ul>
+        <li style="margin-left:4px;"><a href="/" class="first"> 首页</a></li>
+        <li><a href="../../cpyyw/scjywjs/">产品业务</a></li>
+        <li><a href="./">信息披露</a></li>
+        <li><a href="/fk/index.html?402880683f0d9469013f0da248c60002">风险管理</a></li>
+        <li><a href="../../cpgz/zqjqysp/jj/">产品估值</a></li>
+        <li><a href="../../sjtj/tjrb/">数据统计</a></li>
+        <li><a href="../../hyfw/qshy/qshysqzn/sqxgbd/">会员服务</a></li>
+        <li><a href="../../pxsl/pxbm/pxtz/zqywpx/">培训沙龙</a></li>
+        <li><a href="../../jszc/jszl/">技术支持</a></li>
+        <li><a href="../../zcyyj/hytxkw/kwjs/">政策研究</a></li>
+        <li><a href="../../gywm/gsjj/">关于我们</a></li>
+        <li><a href="http://career.shclearing.com/career/client/login" class="last">招聘</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+	<div class="home_menu_bg bigpig" id="gg_pic_han1" style="position: absolute; z-index: 1; width: 100%; display: none;">
+  <ul class=" margina submenulink">
+    <li class="bg"><a href="../../cpyyw/scjywjs/">业务介绍</a></li>
+    <li class="bg"><a href="../../cpyyw/djtgjsyw/">登记托管结算</a></li>
+    <li class="bg"><a href="../../cpyyw/jzqsyw/">中央对手清算</a></li>
+    <li class="bg"><a href="../../cpyyw/dccjzqs/">多层次集中清算</a></li>
+    <li><a href="../../cpyyw/tzgg/">通知公告</a></li>
+    <div class=" clr"></div>
+  </ul>
+	</div>
+	<div class="home_menu_bg bigpig" id="gg_pic_han2"  style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+		  <li class="bg bg1"><a href="../sqfb/">受权发布</a></li>
+		  <li class="bg bg1"><a href="./">发行披露</a></li>
+		  <li class="bg bg1"><a href="../fxqkbg/">发行情况报告</a></li>
+		  <li class="bg bg1"><a href="../jyltysgg/">交易流通要素公告</a></li>
+		  <li class="bg bg1"><a href="../xypj/">信用评级</a></li>
+		  <li class="bg bg1"><a href="../cwbg/">财务报告</a></li>
+		  <li class="bg bg1"><a href="../zdsxjqt/">重大事项及其他</a></li>
+		  <li class="bg bg1"><a href="../dfzx/">兑付注销</a></li>
+		  <li class="bg1"><a href="../lssj/">历史数据</a></li>
+		  <div class=" clr"></div>
+	  </ul>
+	</div>
+
+	<div class="home_menu_bg bigpig" id="gg_pic_han3"  style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+	    <li class="bg"><a href="/fk/index.html?402880683f0d9469013f0da248c60002">风控体系</a></li>
+	    <li class="bg"><a href="/fk/index.html?402880683f0d9469013f0da275220003">保证金</a></li>
+	    <li class="bg"><a href="/fk/index.html?402880683f0d9469013f0da299160004">风控参数</a></li>
+	    <li class="bg"><a href="/fk/index.html?402895814af29afd014b112c48cf5784">违约处理</a></li>
+	    <li class="bg"><a href="/fk/index.html?402880483fc6410b013fc664b60d000f">风险管理委员会</a></li>
+	    <li><a href="/fk/index.html?402880483f7fab67013f7fbd781b0006">在线提问</a></li>               
+	    <div class=" clr"></div>
+	  </ul>
+	</div>
+	
+	<div class="home_menu_bg bigpig" id="gg_pic_han4" style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+	    <li class="bg"><a href="../../cpgz/zqjqysp/">债券市场数据</a></li>
+	    <li class="bg"><a href="../../cpgz/llysp/">利率衍生品市场数据</a></li>
+	    <li class="bg"><a href="../../cpgz/whjqysp/">外汇衍生品市场数据</a></li>
+	    <li class="bg"><a href="../../cpgz/xyysp/">信用衍生品市场数据</a></li>
+	    <li class="bg"><a href="../../cpgz/qtysp/">大宗商品衍生品市场数据</a></li>
+	    <li><a href="../../cpgz/dyjh/">在线提问</a></li>
+	    <div class=" clr"></div>
+	  </ul>
+	</div>
+	
+	<div class="home_menu_bg bigpig" id="gg_pic_han5" style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+	    <li class="bg"><a href="../../sjtj/tjrb/">统计日报</a></li>
+	    <li class="bg"><a href="../../sjtj/tjyb/">统计月报</a></li>
+	    <li class="bg"><a href="../../sjtj/ywfx/">业务分析</a></li>
+             <li><a href="../../sjtj/hlht/">互联互通</a></li>
+	    <div class=" clr"></div>
+	  </ul>
+	</div>
+	<div class="home_menu_bg bigpig" id="gg_pic_han6" style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+	    <li class="bg"><a href="../../hyfw/qshy/">清算会员</a></li>
+	    <li class="bg"><a href="../../hyfw/jscy/">结算成员</a></li>
+	    <li class="bg"><a href="../../hyfw/khgg/">会员公告</a></li>
+	    <li><a href="../../hyfw/dyjh/">在线提问</a></li>
+	    <div class=" clr"></div>
+	  </ul>
+	</div>
+	<div class="home_menu_bg bigpig" id="gg_pic_han7" style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+            <li class="bg"><a href="../../pxsl/pxbm/pxtz/zqywpx/">业务培训</a></li>
+            <li class="bg"><a href="../../pxsl/qsssl/gysl/sljj/">清算所沙龙</a></li>
+	    <div class=" clr"></div>
+  	</ul>
+	</div>
+	<div class="home_menu_bg bigpig" id="gg_pic_han8" style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+	   	    <li class="bg"><a href="../../jszc/jszl/">技术资料</a></li>  
+	   	    <li class="bg"><a href="../../jszc/rjxz/">软件下载</a></li>
+	   	    <li class="bg"><a href="https://app.shclearing.com/shchapp/pages/myarea/login.jsp">测试账号管理</a></li> 
+	  	    <li class="bg"><a href="../../jszc/hywljrsq/">会员网络接入申请</a></li>
+                      <li><a href="../../jszc/zhywxt/">综合业务系统Ⅰ相关资料</a></li>  
+  
+  	</ul>
+	</div>
+	<div class="home_menu_bg bigpig" id="gg_pic_han9" style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+	    <li class="bg"><a href="../../zcyyj/hytxkw/">会员通讯刊物</a></li>
+	    <li class="bg"><a href="../../zcyyj/tyjl/">同业交流</a></li>  
+	    <li><a href="../../zcyyj/jgyzl/">法律与监管</a></li>  
+  	</ul>
+	</div>
+	<div class="home_menu_bg bigpig" id="gg_pic_han10" style="position: absolute; z-index: 1; width: 100%; display: none;">
+	  <ul class=" margina submenulink">
+	    <li class="bg bg1"><a href="../../gywm/gsjj/">公司简介</a></li>
+	    <li class="bg bg1"><a href="../../gywm/zzjg/">组织架构</a></li>
+	    <li class="bg bg1"><a href="../../gywm/qywh/">企业文化</a></li>
+	    <li class="bg bg1"><a href="../../gywm/cjwt/">常见问题</a></li>
+	    <li class="bg bg1"><a href="../../gywm/zxtw/">在线提问</a></li>
+	    <li class="bg bg1"><a href="../../gywm/xwdt/">新闻动态</a></li>
+	    <li class="bg bg1"><a href="../../gywm/xczl/">宣传资料</a></li>
+	    <li class="bg bg1"><a href="../../gywm/ghdb/">工会党办</a></li>
+	    <li class="bg bg1"><a href="../../gywm/gsdsj/">公司大事记</a></li>
+	    <li class="bg1"><a href="../../gywm/lxwm/">联系我们</a></li>
+	    <div class=" clr"></div>
+  	</ul>
+	</div>
+	<!--<div class="home_menu_bg bigpig" id="gg_pic_han11" style="position: absolute; z-index: 1; width: 100%; display: none;">
+ 	  <ul class=" margina submenulink">
+	    <li class="bg"><a href="../../zpxx/shzp/">社会招聘</a></li>
+	    <li class="bg"><a href="../../zpxx/xyzp/">校园招聘</a></li>
+	    <li class="bg"><a href="../../zpxx/ssszp/">实习生招聘</a></li>
+	    <li><a href="../../zpxx/pqryzp/">外包人员招聘</a></li>
+	    <div class=" clr"></div>
+	  </ul> 
+	</div>-->
+	</div>
+	<div class="login_frame">
+	<form action="">
+	   	<div class="login_content">
+		    <label>用户名</label>
+		    <input name type="text" id="name" />
+		    <label>密码</label>
+		    <input name type="password" id="pwd" />
+		    <label>验证码</label>
+		    <input name type="text" id="code1" class="code" /><strong><img class="img_code2" src="" width="65" height="30" /><span><a class="btn_changeimg2">换一张</a></span></strong>
+		    <div class="topError">
+  				您输入的密码和账户名不匹配，请重新输入。
+  			</div>
+		    <div class="btn"><a class="login_btn1">登 录</a>
+  			</div>
+  		</div>
+	</form>
+	</div>
+	</div>
+	<div class="bg_1"></div>
+</div>
+    <div class="fk_wrapper">
+    	<div class="l_con">
+        	<div class="fk_nav">
+						<h2></h2>
+						<ul id="xxpl_tree" class="ztree showIcon"></ul>
+					</div>
+        	<div class="clear"></div>
+        </div>
+      <div class="r_con">
+        	<div class="sub_banner"><img src="../../images/xxpl_banner.jpg" width="748" height="92" /></div>
+            <div class="p_nav"><span class="dqwz">当前位置：</span><span>首页&nbsp;&gt;&gt;&nbsp;信息披露&nbsp;&gt;&gt;&nbsp;发行披露</span>
+            </div>
+        <div class="search_wrap" style="display:none;">
+			检索：<input type="text" name="keyWord" id="keyWord" />&nbsp;日期：<input type="text" maxlength="10" readonly="readonly" onclick="new Calendar().show(this);" id="startDate" name="startDate" />&nbsp;至&nbsp;<input type="text" maxlength="10" readonly="readonly" onclick="new Calendar().show(this);" id="endDate" name="endDate" />
+			<input type="button" name="" id="search" value="查询" />
+			<input type="hidden" name="" id="channelId" value="144" />
+		</div>
+        <div class="fk_list_title">
+            	<span class="title">标题</span>
+                <span class="time">时间</span>
+            	<div class="clear"></div>
+        </div>
+            
+        <ul class="list">
+        	
+					<li><a href="./mtn/201709/t20170919_301128.html" target="_blank">江苏交通控股有限公司2017年度第二期中期票据发行披露材料</a>
+						<span>2017-09-19</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170919_301118.html" target="_blank">福建省能源集团有限责任公司2017年度第四期超短期融资券申购说明</a>
+						<span>2017-09-19</span>
+					</li>
+          
+					<li><a href="./cp/201709/t20170919_301117.html" target="_blank">中国水利水电第十四工程局有限公司2017年度第二期短期融资券申购说明</a>
+						<span>2017-09-19</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170919_301116.html" target="_blank">太仓市水处理有限责任公司2017年度第三期超短期融资券申购说明</a>
+						<span>2017-09-19</span>
+					</li>
+          
+					<li><a href="./cp/201709/t20170918_300736.html" target="_blank">马鞍山钢铁股份有限公司2017年度第二期短期融资券申购说明</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300735.html" target="_blank">山鹰国际控股股份公司2017年度第九期超短期融资券披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./mtn/201709/t20170918_300734.html" target="_blank">中交第二航务工程局有限公司2017年度第一期中期票据发行披露文件</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300733.html" target="_blank">大同煤矿集团有限责任公司2017年度第七期超短融资券发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./mtn/201709/t20170918_300732.html" target="_blank">上海市普陀区城市建设投资有限公司2017年度第二期中期票据发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300731.html" target="_blank">亚厦控股有限公司2017年度第四期超短期融资券发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300730.html" target="_blank">福建省能源集团有限责任公司2017年度第四期超短期融资券发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300729.html" target="_blank">中建投租赁股份有限公司2017年度第六期超短期融资券发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./cp/201709/t20170918_300728.html" target="_blank">吉林省长白山开发建设（集团）有限责任公司2017年度第二期短期融资券发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./cp/201709/t20170918_300727.html" target="_blank">富通集团有限公司2017年度第二期短期融资券发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./mtn/201709/t20170918_300726.html" target="_blank">中国大唐集团公司2017年度第二期中期票据发行披露材料</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300696.html" target="_blank">广西柳工集团有限公司2017年度第一期超短期融资券申购说明</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300695.html" target="_blank">国泰租赁有限公司2017年度第二期超短期融资券申购说明</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./scp/201709/t20170918_300694.html" target="_blank">招商局集团有限公司2017年度第二期超短期融资券申购说明</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./mtn/201709/t20170918_300693.html" target="_blank">无锡市惠山经济发展总公司2017年度第一期中期票据申购说明</a>
+						<span>2017-09-18</span>
+					</li>
+          
+					<li><a href="./tycd1/201709/t20170919_301371.html" target="_blank">重庆农村商业银行股份有限公司2017年第175期同业存单发行公告</a>
+						<span>2017-09-18</span>
+					</li>
+          
+        </ul>
+           
+           
+           <div class="page_roll">
+            <script language="JavaScript" type="text/javascript">
+				new createWcmPageHTML({
+					staticPageCount : 20, 
+					pageIndex : 1, 
+					pageName : "index",
+					pageExt : "html", 
+					pageSize : 20, 
+					totalCount : 67850, 
+					chnlId : 144
+				});	
+			</script>	
+           </div>
+        <div class="faq" style=" display:none; ">
+        <form action="" method="post">
+	        <div class="fk_zxtw_title"></div>
+	        <div class="zxtw_con">
+	        	<div class="zxtw_form">
+	            	<div><span class="star">*</span><span>姓名：</span><input type="text" /><span class="star">*</span><span>地址：</span><input type="text" /></div>
+	                <div><span class="star">*</span><span>E-mail：</span><input type="text" /><span class="star">*</span><span>电话：</span><input type="text" /></div>
+	                <div><span class="star">*</span><span>问题描述：</span><input type="text" class="wtms" /></div>
+	                <div><span class="star">*</span><span>详情描述：</span><input type="text" class="xqms" /></div>
+	                <div><span class="star">*</span><span>附件：</span><input type="text" / class="fj" /><span class="add">添加</span></div>
+	              <div class="v_code"><span class="star">*</span><span>校验码：</span><input type="text" /><span><a href="#"><img src="../../images/v_code.gif" width="75" height="22" alt /></a></span></div>
+	            <div class="submit"><input type="submit" value="Submit" /></div>
+	          		
+	            </div>
+	        </div>        	
+        </form>
+        </div>
+      </div>
+    
+    
+    	<div class="clear"></div>
+    </div>
+    
+    <div id="footer">
+        <div class="footertop">
+            <a href="/building_74.html">安全提示</a>&nbsp;|&nbsp;<a href="/building_74.html">网站声明</a>&nbsp;|&nbsp;<a href="../../gywm/lxwm/">联系我们</a>&nbsp;|&nbsp;<a href="../../yqlj/wzdt/">网站地图</a>&nbsp;|&nbsp;<a href="/building_74.html">投诉建议</a>
+        </div>
+        <div class="footerbottom">
+            <p>地点：上海市黄浦区北京东路2号&nbsp;&nbsp;邮编：200002</p>
+        <div style="height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+            <p style="height=25px;line-height=25px;">
+                        电话：021-23198800&nbsp;&nbsp;传真：021-23198866&nbsp;&nbsp;
+                        <a href="http://www.miibeian.gov.cn" style="color: #2F332A;">沪ICP备11013176号</a>&nbsp;&nbsp;
+			<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102003142" style="display:inline-block;height:20px;line-height:20px;color: #2F332A;">
+                             <img src="../../images/beiantubiao.png" style="float:left;" />沪公网安备 31010102003142号
+                        </a>
+	    </p>
+          </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d885bd65f967ea9372fc7200bc83fa81";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
