@@ -23,7 +23,6 @@ class ShclearingPostSpider(scrapy.Spider):
             request_data = FormRequest(url=url, formdata=formdata, callback=self.parse_data)
             request_data.meta['pageNum'] = 1
             request_data.meta['sourceType'] = 10
-            print(request_data)
             yield request_data
         except Exception as e:
            logging.error(e, exc_info=True) 
@@ -35,12 +34,14 @@ class ShclearingPostSpider(scrapy.Spider):
             datas_json = result_json['datas']
             for data in datas_json:
                 url = data['linkurl'] 
+                scrapy.Request(url, callback=self.parse_item) 
                 tmp = url.split('/') 
                 type1 = tmp[4] 
                 type2 = tmp[5]
                 item = ShclearingNews()
                 item['title'] = data['title']
                 item['url']  = data['linkurl']
+
                 item['type1'] = type1
                 item['type2'] = type2
                 item['publish_time'] = data['pubdate']
@@ -52,4 +53,7 @@ class ShclearingPostSpider(scrapy.Spider):
             logging.error(e, exc_info=True)
             logging.error("Error process:")
 
-
+    def parse_item(self, response):
+       url = response.url
+       print(111)
+       print(url)
