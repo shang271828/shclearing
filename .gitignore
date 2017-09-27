@@ -1,0 +1,9 @@
+*.pyc
+*.swp
+*.copy
+*.swn
+*.swo
+*.txt
+.*   
+shclearing/settings.py
+shclearing/pipelines.py

@@ -21,5 +21,4 @@ class ShclearingPdfNews(ShclearingNews):
     # define the fields for your item here like:
     pdf_filename = scrapy.Field()
     pdf_downname = scrapy.Field()
-    pdf_path = scrapy.Field()
   
