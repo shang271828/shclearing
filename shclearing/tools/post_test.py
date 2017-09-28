@@ -1,7 +1,6 @@
 # coding:utf-8
 import requests, re
 
-from PyPDF2 import PdfFileMerger
 import sys  
 import os
 import MySQLdb
