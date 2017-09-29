@@ -22,3 +22,11 @@ class ShclearingPdfNews(ShclearingNews):
     pdf_filename = scrapy.Field()
     pdf_downname = scrapy.Field()
   
+class xxplItem(scrapy.Item):
+    sh_id = scrapy.Field()
+    pId = scrapy.Field()
+    xxpl_url = scrapy.Field()
+    name = scrapy.Field()
+    xxpl_id = scrapy.Field()
+    xxpl_desc = scrapy.Field()
+    channel_id = scrapy.Field()

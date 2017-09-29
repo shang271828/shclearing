@@ -34,7 +34,7 @@ class ShclearingPostSpider(scrapy.Spider):
             datas_json = result_json['datas']
             for data in datas_json:
                 url = data['linkurl'] 
-                scrapy.Request(url, callback=self.parse_item) 
+                yield scrapy.Request(url, callback=self.parse_item) 
                 tmp = url.split('/') 
                 type1 = tmp[4] 
                 type2 = tmp[5]
@@ -54,6 +54,9 @@ class ShclearingPostSpider(scrapy.Spider):
             logging.error("Error process:")
 
     def parse_item(self, response):
-       url = response.url
-       print(111)
-       print(url)
+        url = response.url
+        dom1 = response.xpath('//script/text()').re(r'fileNames = \'(.*)\'') 
+        dom2 = response.xpath('//script/text()').re(r'descNames = \'(.*)\'')
+
+        return url
+
