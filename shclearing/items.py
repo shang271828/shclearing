@@ -12,8 +12,9 @@ class ShclearingNews(scrapy.Item):
     title = scrapy.Field()
     url = scrapy.Field()
     publish_time = scrapy.Field()
-    type1 = scrapy.Field()
-    type2 = scrapy.Field()
+    channel_url = scrapy.Field()
+    channel_name = scrapy.Field()
+    channel_id = scrapy.Field()
     create_time = scrapy.Field()
     update_time = scrapy.Field()
 

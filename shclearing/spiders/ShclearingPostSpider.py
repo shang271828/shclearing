@@ -6,6 +6,21 @@ import scrapy
 import datetime
 from shclearing.items import ShclearingPdfNews 
 from scrapy.http.request.form import FormRequest
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.engine import create_engine
+from sqlalchemy.sql.schema import Column
+from sqlalchemy.orm.session import sessionmaker
+from sqlalchemy.sql.sqltypes import String
+from sqlalchemy.types import CHAR, Integer, String
+
+Base = declarative_base()
+
+class Channel(Base):
+    __tablename__ = 'shclearing_xxpl_map'
+    id  = Column(Integer, primary_key=True)
+    channel_id = Column(Integer)
+    xxpl_desc = Column(String)
+    xxpl_url = Column(String)
 
 class ShclearingPostSpider(scrapy.Spider):
     name = "shclearingPostSpider"
@@ -13,12 +28,15 @@ class ShclearingPostSpider(scrapy.Spider):
     def start_requests(self):
         try:        
             limit = '50'
-            channelId = '144'
-            for start in range(1,10000):
-                formdata = {'start':str(start), 'limit':limit, 'channelId':channelId}
-                url = "http://www.shclearing.com/shchapp/web/disclosureForTrsServer/search"
-                request_data = FormRequest(url=url, formdata=formdata, callback=self.parse_data)
-                yield request_data
+            xxpl_map = self.get_channel()
+            for xxpl_item in xxpl_map:
+                channel_id = xxpl_item.channel_id
+                for start in range(1,10000):
+                    formdata = {'start':str(start), 'limit':limit, 'channelId':str(channel_id)}
+                    url = "http://www.shclearing.com/shchapp/web/disclosureForTrsServer/search"
+                    request_data = FormRequest(url=url, formdata=formdata, callback=self.parse_data)
+                    request_data.meta['xxpl_item'] = xxpl_item
+                    yield request_data
         except Exception as e:
            logging.error(e, exc_info=True) 
            logging.error("Error process: ")
@@ -32,6 +50,7 @@ class ShclearingPostSpider(scrapy.Spider):
                 #从url中进一步获取pdf链接
                 fileRequest = scrapy.Request(url, callback=self.parse_item) 
                 fileRequest.meta['data'] = data
+                fileRequest.meta['xxpl_item'] = response.meta.get('xxpl_item')
                 yield fileRequest
         except Exception as e:  # not available site
             logging.error(e, exc_info=True)
@@ -40,6 +59,7 @@ class ShclearingPostSpider(scrapy.Spider):
     def parse_item(self, response):
         url = response.url
         data = response.meta.get('data')
+        xxpl_item = response.meta.get('xxpl_item')
         dom1 = response.xpath('//script/text()').re(r'fileNames = \'(.*)\'') 
         dom2 = response.xpath('//script/text()').re(r'descNames = \'(.*)\'')
         filename_arr = dom1[0].split(';;')
@@ -51,11 +71,22 @@ class ShclearingPostSpider(scrapy.Spider):
                 item['pdf_downname'] = downname_arr[index]
                 item['title'] = data['title']
                 item['url']  = data['linkurl']                       
-                tmp = url.split('/')
-                item['type1'] = tmp[4]                               
-                item['type2'] = tmp[5]
+                item['channel_url'] = xxpl_item.xxpl_url                               
+                item['channel_name'] = xxpl_item.xxpl_desc
+                item['channel_id'] = xxpl_item.channel_id
                 item['publish_time'] = data['pubdate']
                 item['create_time'] = datetime.datetime.now()
                 item['update_time'] = datetime.datetime.now()
         print item
         yield item
+
+    def get_channel(self):
+        result = []
+        try:
+            engine = create_engine('mysql://root:hoboom@106.75.3.227:3306/scrapy?charset=utf8', echo=True)
+            session = sessionmaker(bind=engine)()
+            result = session.query(Channel).all()
+        except Exception as e:
+            logging.error(e, exc_info=True)
+
+        return result 
