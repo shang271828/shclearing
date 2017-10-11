@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #-*- encoding:utf8 -*-
-
+#获取上海清算网的债券目录结构，存入数据库表shclearing_xxpl_map
 import logging
 import scrapy
 import datetime

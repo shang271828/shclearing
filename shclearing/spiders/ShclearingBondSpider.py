@@ -37,6 +37,7 @@ class ShclearingBondSpider(scrapy.Spider):
     def parse_item(self, response):
         try:
             url = response.url
+            print(url)
             tmp = url.split('/') 
             type1 = tmp[4]
             type2 = tmp[5] 
