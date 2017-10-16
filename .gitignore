@@ -8,3 +8,4 @@
 pdf.*
 shclearing/settings.py
 shclearing/pipelines.py
+nohup.out

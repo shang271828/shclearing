@@ -32,8 +32,9 @@ class ShclearingPostSpider(scrapy.Spider):
             xxpl_map = self.get_channel()
             for xxpl_item in xxpl_map:
                 channel_id = xxpl_item.channel_id
-                for start in range(1,1000):
-                    formdata = {'start':str(start), 'limit':limit, 'channelId':str(channel_id)}
+                channel_id = '449'
+                for start in range(1000):
+                    formdata = {'start':str(start*limit), 'limit':limit, 'channelId':str(channel_id)}
                     url = "http://www.shclearing.com/shchapp/web/disclosureForTrsServer/search"
                     request_data = FormRequest(url=url, formdata=formdata, callback=self.parse_data)
                     request_data.meta['xxpl_item'] = xxpl_item
@@ -88,7 +89,7 @@ class ShclearingPostSpider(scrapy.Spider):
     def get_channel(self):
         result = []
         try:
-            engine = create_engine('mysql://root:hoboom@106.75.3.227:3306/scrapy?charset=utf8', echo=True)
+            engine = create_engine('mysql://root:hoboom@10.9.23.110:3306/scrapy?charset=utf8', echo=True)
             session = sessionmaker(bind=engine)()
             result = session.query(Channel).filter(Channel.pId!=0).all()
         except Exception as e:
