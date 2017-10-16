@@ -32,7 +32,6 @@ class ShclearingPostSpider(scrapy.Spider):
             xxpl_map = self.get_channel()
             for xxpl_item in xxpl_map:
                 channel_id = xxpl_item.channel_id
-                channel_id = '449'
                 for start in range(1000):
                     formdata = {'start':str(start*limit), 'limit':limit, 'channelId':str(channel_id)}
                     url = "http://www.shclearing.com/shchapp/web/disclosureForTrsServer/search"
